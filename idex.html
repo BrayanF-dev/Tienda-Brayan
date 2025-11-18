@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de ropa Brayan's</title>
+    <link rel="stylesheet" href="style.css/css">
+</head>
+<body>
+    <div id="login-section">
+        <div class="login-container">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form" action="LoginServlet" method="POST">
+                <input type="text" name="usuario" id="username" placeholder="Usuario" required>
+                <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            <p class="login-hint">Usa: username: "Brayan" | password: "3123915523$"</p>
+        </div>
+    </div>
+    <div id="main-section" style="display: none;">
+        <header>
+            <h1>Tienda de ropa Brayan's</h1>
+            <button id="ver-carrito-btn">🛒 Ver Carrito (<span id="carrito-count">0</span>)</button>
+        </header>
+
+        <main>
+            <section id="catalogo-productos" class="productos-grid">
+                <p class="loading">Cargando productos...</p>
+            </section>
+            <aside id="carrito" class="carrito-sidebar">
+                <div class="carrito-header">
+                    <h2>Mi Carrito</h2>
+                    <button id="cerrar-carrito-btn">✕</button>
+                </div>
+                <div id="carrito-items"></div>
+                <div class="carrito-footer">
+                    <h3>Total: $<span id="carrito-total">0.00</span></h3>
+                    <button id="finalizar-compra">Finalizar Compra</button>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="script.js/js"></script>
+</body>
+</html>
